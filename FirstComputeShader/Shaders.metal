@@ -16,5 +16,5 @@ kernel void compute(texture2d<float, access::write> tex [[ texture(0) ]],
     float2 uv = (2.0 * fragCoord.xy - resolution) / float2(resolution.x, resolution.y);
     uv.y *= -1.0;
     
-    tex.write(half4(uv.x,uv.y,0,1),id);
+    tex.write(float4(uv,0.0,1.0),id);
 }
