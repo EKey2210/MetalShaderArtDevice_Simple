@@ -6,7 +6,7 @@
 #include <metal_stdlib>
 using namespace metal;
 
-kernel void compute(texture2d<half, access::write> tex [[ texture(0) ]],
+kernel void compute(texture2d<float, access::write> tex [[ texture(0) ]],
                     constant float &time [[buffer(0)]],
                     uint2 id [[ thread_position_in_grid ]]){
     
